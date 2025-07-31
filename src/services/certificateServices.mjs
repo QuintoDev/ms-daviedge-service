@@ -1,21 +1,41 @@
 import crypto from "crypto";
 
-const verifyCert = (data) => {
+/**
+ * Validates a certificate in plain text
+ * @param {string} data - Certificate in PEM format
+ * @param {Object} options - { mode: 'validate' | 'read' }
+ * @returns {string}
+ */
+const validateCertificate = (data, { mode = 'validate' } = {}) => {
     try {
         const normalizedData = data.trim();
-        if (!normalizedData.includes('-----BEGIN CERTIFICATE-----') || !normalizedData.includes('-----END CERTIFICATE-----')) {
-            throw new Error('El certificado no contiene el encabezado -----BEGIN CERTIFICATE----- o -----END CERTIFICATE-----');
-        } else {
-            const cert = new crypto.X509Certificate(normalizedData);
-            console.log('Certificado verificado correctamente');
 
-            return cert.serialNumber;
+        if (
+            !normalizedData.includes('-----BEGIN CERTIFICATE-----') ||
+            !normalizedData.includes('-----END CERTIFICATE-----')
+        ) {
+            return 'El texto no contiene un certificado válido en formato PEM.';
         }
 
-    } catch (error) {
-        console.error('Error al verificar el certificado:', error.message);
+        const cert = new crypto.X509Certificate(normalizedData);
+
+        if (mode === 'read') {
+            return `Información del certificado:\n\n` +
+                `Serial: ${cert.serialNumber}\n` +
+                `Emitido por: ${cert.issuer}\n` +
+                `Válido desde: ${cert.validFrom}\n` +
+                `Hasta: ${cert.validTo}`;
+        }
+
+        const now = new Date();
+        const isValid = new Date(cert.validFrom) <= now && now <= new Date(cert.validTo);
+
+        return isValid
+            ? `Certificado válido.\nSerial: ${cert.serialNumber}\nVálido hasta: ${cert.validTo}`
+            : `Certificado expirado o aún no vigente.\nVálido desde: ${cert.validFrom}\nHasta: ${cert.validTo}`;
+    } catch (err) {
+        return `Error al procesar el certificado: ${err.message}`;
     }
+};
 
-}
-
-export { verifyCert };
+export { validateCertificate };
