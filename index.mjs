@@ -1,8 +1,16 @@
-import { handlerChat } from '../src/controllers/chatController.mjs'
+import { handlerChat } from './src/controllers/chatController.mjs'
 
 export const handler = async (event) => {
-  const message = JSON.parse(event.body);
-  await handlerChat(message);
+  const response = await handlerChat(JSON.parse(event.body));
+
+  console.log('Response:', response);
+
+  return {
+    statusCode: 200,
+    body: JSON.stringify({
+      text: response
+    })
+  };
 }
 
 handler({

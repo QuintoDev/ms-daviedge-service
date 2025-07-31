@@ -63,6 +63,13 @@ Desktop.ini
 .env.local
 .env.*.local
 
+# Compressed files
+*.zip
+*.tar.gz
+*.tgz
+*.rar
+*.7z
+
 # Misc
 *.swp
 *.bak
