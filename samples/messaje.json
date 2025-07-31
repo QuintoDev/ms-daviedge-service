@@ -1,0 +1,61 @@
+{
+  type: 'MESSAGE',
+  eventTime: '2025-07-30T22:11:06.394639Z',
+  message: {
+    name: 'spaces/AAAAPhMsFf0/messages/2geknOZ_R3E.2geknOZ_R3E',
+    sender: {
+      name: 'users/109378185192163901427',
+      displayName: 'Fanor Hernan Quintero Atara',
+      avatarUrl: 'https://lh3.googleusercontent.com/a/ACg8ocKqh-tNA2B5w5Yn63FLEpV_OjtwSGxvOQ-iK2NxYMox2kxzGA=k-no',
+      email: 'fanor.quintero@davivienda.com',
+      type: 'HUMAN',
+      domainId: '33ylmlo'
+    },
+    createTime: '2025-07-30T22:11:06.394639Z',
+    text: '/daviedge hola',
+    annotations: [ [Object] ],
+    thread: {
+      name: 'spaces/AAAAPhMsFf0/threads/2geknOZ_R3E',
+      retentionSettings: [Object]
+    },
+    space: {
+      name: 'spaces/AAAAPhMsFf0',
+      type: 'ROOM',
+      displayName: 'FHQUINTE',
+      spaceThreadingState: 'THREADED_MESSAGES',
+      spaceType: 'SPACE',
+      spaceHistoryState: 'HISTORY_ON',
+      lastActiveTime: '2025-07-30T22:10:22.363375Z',
+      membershipCount: [Object],
+      spaceUri: 'https://chat.google.com/room/AAAAPhMsFf0?cls=11'
+    },
+    argumentText: ' hola',
+    slashCommand: { commandId: '1' },
+    retentionSettings: { state: 'PERMANENT' },
+    messageHistoryState: 'HISTORY_ON',
+    formattedText: '/daviedge hola'
+  },
+  user: {
+    name: 'users/109378185192163901427',
+    displayName: 'Fanor Hernan Quintero Atara',
+    avatarUrl: 'https://lh3.googleusercontent.com/a/ACg8ocKqh-tNA2B5w5Yn63FLEpV_OjtwSGxvOQ-iK2NxYMox2kxzGA=k-no',
+    email: 'fanor.quintero@davivienda.com',
+    type: 'HUMAN',
+    domainId: '33ylmlo'
+  },
+  space: {
+    name: 'spaces/AAAAPhMsFf0',
+    type: 'ROOM',
+    displayName: 'FHQUINTE',
+    spaceThreadingState: 'THREADED_MESSAGES',
+    spaceType: 'SPACE',
+    spaceHistoryState: 'HISTORY_ON',
+    lastActiveTime: '2025-07-30T22:10:22.363375Z',
+    membershipCount: { joinedDirectHumanUserCount: 1 },
+    spaceUri: 'https://chat.google.com/room/AAAAPhMsFf0?cls=11'
+  },
+  configCompleteRedirectUrl: 'https://chat.google.com/api/bot_config_complete?token=AGSmvGNuiAQBwzv4K0gAoyEaNi2lz9-VXvLg3RFERjQzr4x6UZZyBtTw8CD_31rgAkwDE4XL8MIr6oxdaPX1BZwRObKgcWGxORioyzyvMX-aVLqA4yHwC-29sb8iaYk6JQvmPPRPV5BHYISbExKb9lrDiQ%3D%3D',
+  common: { userLocale: 'es', hostApp: 'CHAT' },
+  appCommandMetadata: { appCommandId: 1, appCommandType: 'SLASH_COMMAND' },
+  thread: { name: 'spaces/AAAAPhMsFf0/threads/2geknOZ_R3E' }
+}

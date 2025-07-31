@@ -1,0 +1,139 @@
+import { handlerChat } from '../src/controllers/chatController.mjs'
+
+export const handler = async (event) => {
+  const message = JSON.parse(event.body);
+  await handlerChat(message);
+}
+
+handler({
+  version: '2.0',
+  routeKey: 'POST /question',
+  rawPath: '/question',
+  rawQueryString: '',
+  headers: {
+    'accept-encoding': 'gzip, deflate, br',
+    authorization: 'Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImRkNTMwMTIwNGZjMWQ2YTBkNjhjNzgzYTM1Y2M5YzEwYjI1ZTFmNGEiLCJ0eXAiOiJKV1QifQ.eyJhdWQiOiJodHRwczovL2Y0OW5pMXo0djUuZXhlY3V0ZS1hcGkudXMtZWFzdC0xLmFtYXpvbmF3cy5jb20vcXVlc3Rpb24iLCJhenAiOiIxMDYzNTIwNDM4OTk0Mzc1MjM0MDciLCJlbWFpbCI6ImNoYXRAc3lzdGVtLmdzZXJ2aWNlYWNjb3VudC5jb20iLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwiZXhwIjoxNzUzOTIyNzU0LCJpYXQiOjE3NTM5MTkxNTQsImlzcyI6Imh0dHBzOi8vYWNjb3VudHMuZ29vZ2xlLmNvbSIsInN1YiI6IjEwNjM1MjA0Mzg5OTQzNzUyMzQwNyJ9.DeIjTetWoMG-FwxrEEVzI-1KXUYvMH5ofXxfJR1QlMApc1Zz46vtdQLA1U03LpqSdx9mVe59IthmAUah1WFpz7D2uat4dwUa2-gwTC0tlOUE5fcXhhysnGPr7xCKeSVobEvvhxtPeF8JgMetjqwYQufRtLnvuPvsOdRd8u4s7iW6LBUxLaUSAn7WgJ_ItEWRAfLp-lcmgCrrz-sfe2DjmPZWTtMKXMFoOVSzStg5GgdYpZlXi6dm_RJCrQwr7HIBnhInDUpqQt2adj45ZQktWdBYZsFEcI7TabImlmCpRUhCUx4NMuO_ZHs-CnTOWoySIwvbF_JBoCDg1Km81RZWXQ',
+    'content-length': '3125',
+    'content-type': 'application/json; charset=utf-8',
+    from: '',
+    host: 'f49ni1z4v5.execute-api.us-east-1.amazonaws.com',
+    'user-agent': 'Google-Dynamite',
+    'x-amzn-trace-id': 'Root=1-688aaeb2-308dc5fd6436d9a5718e5308',
+    'x-forwarded-for': '74.125.212.128',
+    'x-forwarded-port': '443',
+    'x-forwarded-proto': 'https'
+  },
+  requestContext: {
+    accountId: '093521229683',
+    apiId: 'f49ni1z4v5',
+    domainName: 'f49ni1z4v5.execute-api.us-east-1.amazonaws.com',
+    domainPrefix: 'f49ni1z4v5',
+    http: {
+      method: 'POST',
+      path: '/question',
+      protocol: 'HTTP/1.1',
+      sourceIp: '74.125.212.128',
+      userAgent: 'Google-Dynamite'
+    },
+    requestId: 'OjA77hvOoAMEJxw=',
+    routeKey: 'POST /question',
+    stage: '$default',
+    time: '30/Jul/2025:23:45:54 +0000',
+    timeEpoch: 1753919154327
+  },
+  body: '{\n' +
+    '  "type": "MESSAGE",\n' +
+    '  "eventTime": "2025-07-30T23:45:53.924911Z",\n' +
+    '  "message": {\n' +
+    '    "name": "spaces/AAAAPhMsFf0/messages/rgZDSQeIfE8.rgZDSQeIfE8",\n' +
+    '    "sender": {\n' +
+    '      "name": "users/109378185192163901427",\n' +
+    '      "displayName": "Fanor Hernan Quintero Atara",\n' +
+    '      "avatarUrl": "https://lh3.googleusercontent.com/a/ACg8ocKqh-tNA2B5w5Yn63FLEpV_OjtwSGxvOQ-iK2NxYMox2kxzGA\\u003dk-no",\n' +
+    '      "email": "fanor.quintero@davivienda.com",\n' +
+    '      "type": "HUMAN",\n' +
+    '      "domainId": "33ylmlo"\n' +
+    '    },\n' +
+    '    "createTime": "2025-07-30T23:45:53.924911Z",\n' +
+    '    "text": "/daviedge hola",\n' +
+    '    "annotations": [{\n' +
+    '      "type": "SLASH_COMMAND",\n' +
+    '      "startIndex": 0,\n' +
+    '      "length": 9,\n' +
+    '      "slashCommand": {\n' +
+    '        "bot": {\n' +
+    '          "name": "users/102165629683576637421",\n' +
+    '          "displayName": "DaviEdge",\n' +
+    '          "avatarUrl": "https://lh4.googleusercontent.com/proxy/VKEqkUiCfghwukKieolEPvhV_JQi-CKcLKbwvkPpVD1hIphvARLoQz3SWf_hviNx_zgbku-EUayeFyFAaQWrhUcaVp0QLhkqkPxcCg",\n' +
+    '          "type": "BOT"\n' +
+    '        },\n' +
+    '        "type": "INVOKE",\n' +
+    '        "commandName": "/daviedge",\n' +
+    '        "commandId": "1"\n' +
+    '      }\n' +
+    '    }],\n' +
+    '    "thread": {\n' +
+    '      "name": "spaces/AAAAPhMsFf0/threads/rgZDSQeIfE8",\n' +
+    '      "retentionSettings": {\n' +
+    '        "state": "PERMANENT"\n' +
+    '      }\n' +
+    '    },\n' +
+    '    "space": {\n' +
+    '      "name": "spaces/AAAAPhMsFf0",\n' +
+    '      "type": "ROOM",\n' +
+    '      "displayName": "FHQUINTE",\n' +
+    '      "spaceThreadingState": "THREADED_MESSAGES",\n' +
+    '      "spaceType": "SPACE",\n' +
+    '      "spaceHistoryState": "HISTORY_ON",\n' +
+    '      "lastActiveTime": "2025-07-30T22:11:07.686863Z",\n' +
+    '      "membershipCount": {\n' +
+    '        "joinedDirectHumanUserCount": 1\n' +
+    '      },\n' +
+    '      "spaceUri": "https://chat.google.com/room/AAAAPhMsFf0?cls\\u003d11"\n' +
+    '    },\n' +
+    '    "argumentText": " hola",\n' +
+    '    "slashCommand": {\n' +
+    '      "commandId": "1"\n' +
+    '    },\n' +
+    '    "retentionSettings": {\n' +
+    '      "state": "PERMANENT"\n' +
+    '    },\n' +
+    '    "messageHistoryState": "HISTORY_ON",\n' +
+    '    "formattedText": "/daviedge hola"\n' +
+    '  },\n' +
+    '  "user": {\n' +
+    '    "name": "users/109378185192163901427",\n' +
+    '    "displayName": "Fanor Hernan Quintero Atara",\n' +
+    '    "avatarUrl": "https://lh3.googleusercontent.com/a/ACg8ocKqh-tNA2B5w5Yn63FLEpV_OjtwSGxvOQ-iK2NxYMox2kxzGA\\u003dk-no",\n' +
+    '    "email": "fanor.quintero@davivienda.com",\n' +
+    '    "type": "HUMAN",\n' +
+    '    "domainId": "33ylmlo"\n' +
+    '  },\n' +
+    '  "space": {\n' +
+    '    "name": "spaces/AAAAPhMsFf0",\n' +
+    '    "type": "ROOM",\n' +
+    '    "displayName": "FHQUINTE",\n' +
+    '    "spaceThreadingState": "THREADED_MESSAGES",\n' +
+    '    "spaceType": "SPACE",\n' +
+    '    "spaceHistoryState": "HISTORY_ON",\n' +
+    '    "lastActiveTime": "2025-07-30T22:11:07.686863Z",\n' +
+    '    "membershipCount": {\n' +
+    '      "joinedDirectHumanUserCount": 1\n' +
+    '    },\n' +
+    '    "spaceUri": "https://chat.google.com/room/AAAAPhMsFf0?cls\\u003d11"\n' +
+    '  },\n' +
+    '  "configCompleteRedirectUrl": "https://chat.google.com/api/bot_config_complete?token\\u003dAGSmvGMbo-8ctQVgUXWbk9cLqtbocnbLHy1esQZWONDKFTOBX-lHirZzyPoTtOmHSv-Q7MnH1nUcnaHR9Mx6gyEnvrmPWbsQRQp1aL6Cd2nqkSETnvm-eE_tvze6yh9BR-bSZMGJtdwBb-Rr1ROB9kSdaA%3D%3D",\n' +
+    '  "common": {\n' +
+    '    "userLocale": "es",\n' +
+    '    "hostApp": "CHAT"\n' +
+    '  },\n' +
+    '  "appCommandMetadata": {\n' +
+    '    "appCommandId": 1,\n' +
+    '    "appCommandType": "SLASH_COMMAND"\n' +
+    '  },\n' +
+    '  "thread": {\n' +
+    '    "name": "spaces/AAAAPhMsFf0/threads/rgZDSQeIfE8"\n' +
+    '  }\n' +
+    '}',
+  isBase64Encoded: false
+})

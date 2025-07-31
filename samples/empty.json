@@ -1,0 +1,60 @@
+{
+  type: 'MESSAGE',
+  eventTime: '2025-07-30T22:15:49.742559Z',
+  message: {
+    name: 'spaces/AAAAPhMsFf0/messages/BOqtxXFYu7c.BOqtxXFYu7c',
+    sender: {
+      name: 'users/109378185192163901427',
+      displayName: 'Fanor Hernan Quintero Atara',
+      avatarUrl: 'https://lh3.googleusercontent.com/a/ACg8ocKqh-tNA2B5w5Yn63FLEpV_OjtwSGxvOQ-iK2NxYMox2kxzGA=k-no',
+      email: 'fanor.quintero@davivienda.com',
+      type: 'HUMAN',
+      domainId: '33ylmlo'
+    },
+    createTime: '2025-07-30T22:15:49.742559Z',
+    text: '/daviedge',
+    annotations: [ [Object] ],
+    thread: {
+      name: 'spaces/AAAAPhMsFf0/threads/BOqtxXFYu7c',
+      retentionSettings: [Object]
+    },
+    space: {
+      name: 'spaces/AAAAPhMsFf0',
+      type: 'ROOM',
+      displayName: 'FHQUINTE',
+      spaceThreadingState: 'THREADED_MESSAGES',
+      spaceType: 'SPACE',
+      spaceHistoryState: 'HISTORY_ON',
+      lastActiveTime: '2025-07-30T22:11:07.686863Z',
+      membershipCount: [Object],
+      spaceUri: 'https://chat.google.com/room/AAAAPhMsFf0?cls=11'
+    },
+    slashCommand: { commandId: '1' },
+    retentionSettings: { state: 'PERMANENT' },
+    messageHistoryState: 'HISTORY_ON',
+    formattedText: '/daviedge'
+  },
+  user: {
+    name: 'users/109378185192163901427',
+    displayName: 'Fanor Hernan Quintero Atara',
+    avatarUrl: 'https://lh3.googleusercontent.com/a/ACg8ocKqh-tNA2B5w5Yn63FLEpV_OjtwSGxvOQ-iK2NxYMox2kxzGA=k-no',
+    email: 'fanor.quintero@davivienda.com',
+    type: 'HUMAN',
+    domainId: '33ylmlo'
+  },
+  space: {
+    name: 'spaces/AAAAPhMsFf0',
+    type: 'ROOM',
+    displayName: 'FHQUINTE',
+    spaceThreadingState: 'THREADED_MESSAGES',
+    spaceType: 'SPACE',
+    spaceHistoryState: 'HISTORY_ON',
+    lastActiveTime: '2025-07-30T22:11:07.686863Z',
+    membershipCount: { joinedDirectHumanUserCount: 1 },
+    spaceUri: 'https://chat.google.com/room/AAAAPhMsFf0?cls=11'
+  },
+  configCompleteRedirectUrl: 'https://chat.google.com/api/bot_config_complete?token=AGSmvGP4Ji7j6hyKBkh11eoYpjHL_XQ3Y55-NO16lnIWsIGETWIhQadqjcLkl3jPHzm0clpFtkToOABcpJnSvfPkdsdM-2sBcbGLhZTdcvGjhNI49THhwOtxkkkzAw_fpOk7J8ypJRFDs_esXef08TC1uw%3D%3D',
+  common: { userLocale: 'es', hostApp: 'CHAT' },
+  appCommandMetadata: { appCommandId: 1, appCommandType: 'SLASH_COMMAND' },
+  thread: { name: 'spaces/AAAAPhMsFf0/threads/BOqtxXFYu7c' }
+}
